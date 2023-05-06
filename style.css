@@ -3,13 +3,16 @@ body {
     margin: 0;
     background-color: white;
     font:15px ‘Roboto’, Arial, Helvetica, sans-serif;
-    
 }
-
 .line {
-    border-bottom: 2px solid #134c54; /* Параметры линии */
+    border-bottom: 2px solid #262626; /* Параметры линии */
 }
-
+.dadaev {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  color: #c8c7c7;
+}
 .name {
     display: flex;
     justify-content: center;
@@ -17,29 +20,183 @@ body {
     font-size: 16px;
     color: black;
 }
-
 a {
     text-decoration: none;
     color: black;
 }
-
 header {
     color: black;
     justify-content: center;
 }
-
+#lami{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  padding-left: 10%;
+  padding-top: 5%;
+  margin-top: 400px;
+}
+.name_bot {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.3%;
+  font-size: 16px;
+}
+.nav {
+  display: flex;
+}
+.card__img {
+  display: grid;
+    /* Автоматически заполняем на всю ширину grid-контейнера */
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; /* Ширина grid-контейнера */
+    justify-content: center;
+    justify-items: center; /* Размещаем карточку по центру */
+    column-gap: 30px; /* Отступ между колонками */
+    row-gap: 40px; /* Отступ между рядами */
+    margin: 0 auto;
+}
+#sec {
+  position: absolute;
+  top: 50%;
+  left: 89.7%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 498px;
+  background: #262626;
+  overflow: hidden;
+}
+/* Style the search field */
+form.example input[type=text] {
+   padding:10px;
+   font-size:17px;
+   border:1px solid grey;
+   float:left;
+   width:80%;
+   background:#f1f1f1;
+  }
+  form.example button {
+   float: left;
+   width: 10%;
+   padding: 10px;
+   background: #000000a5;
+   color: white;
+   font-size:17px;
+   border:1px solid grey;
+   border-left:none;
+    cursor:pointer;
+  }
+  form.example button:hover{
+    background: #1f1f1f;
+  }
+  /* Clear floats */
+  form.example::after {
+   content:"";
+   clear:both;
+   display:table;
+  }
+.card-top {
+  position: absolute;
+  top: 50%;
+  left: 10.3%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 510px;
+  background: #262626;
+  overflow: hidden;
+}
+.mgBx-title{
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 20px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+.card-top .imgBx,
+.card-top .details {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  transition: .7s;
+}
+.card-top .imgBx {
+  top: 0;
+  left: 0;
+}
+.card-top:hover .imgBx {
+  top: 0;
+  left: -100%;
+}
+.card-top .imgBx img {
+  width: 100%;
+}
+.card-top .details {
+  top: 0;
+  left: 100%;
+  padding: 10px 30px;
+}
+.card-top:hover .details {
+  top: 0;
+  left: 0%;
+}
+.card-top .details h2 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 5px;
+  border-bottom: 2px solid #fff;
+}
+.card-top .details p {
+  margin: 20px 0 0;
+  color: #fff;
+}
+/* Dropdown Button */
+.dropbtn {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border: none;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-left: 9px;   
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #ffffff;
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px; 
+    text-decoration: none;
+    display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #c1c1c1;}
 .underline-one {
     display: flex;
     justify-content: space-around;
     text-align: center;
-	color: #3b3b3b; /* Цвет обычной ссылки */
+  	color: #ffffff; /* Цвет обычной ссылки */
     position: relative;
     cursor: pointer;
     text-decoration: none; /* Убираем подчеркивание */
     font-size: 18px;
     padding-bottom: 3px;
 }
-
 .underline-one:after {
 	content: "";
     display: block;
@@ -51,9 +208,8 @@ header {
     background-color: black; /* Цвет подчеркивания при исчезании линии*/
     transition: width 0.9s; /* Время эффекта */
 }
-
 .underline-one:hover:after {
-	content: "";
+	 content: "";
     width: 100%;
     display: block;
     position: absolute;
@@ -63,45 +219,39 @@ header {
     background-color: rgb(0, 0, 0); /* Цвет подчеркивания при появлении линии*/
     transition: width 0.5s;  
 }
-  
 .start {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 26px;
 }
-
 .left-img {
     float:left; 
     margin: 50px 10px 10px 10px; 
 }
-
 .zavod-title {
-    display: flex;
-    padding-top: 50px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 23% 0 23%;
     margin: 24px 5%;
     font-size: 110%;
-    color: black;
+    color: black;   
 }
-
 .company {
     display: flex;
     color: #bbc4c8;
 }
-
 .boss-name {
     display: flex;
     margin: 20px 25px 0;
-    font-size: 80px;
+    font-size: 4 10px;
 }
-
-
 .all-second {
     display: flex;
     margin: 0 25px;
-    font-size: 40px;
+    font-size: 20px;
 }
-
 .footer {
     display: flex;
     justify-content: space-around;
@@ -109,27 +259,23 @@ header {
     padding: 50px 40px 50px 40px;
     background-color: #9c9c9c;
     border-radius: 30px;
-    width: 100%;
+    width: 80%;
 }
-
 .all-title {    
     text-align: left;
     font-size: 20px;
     margin: 40px 33.3%;
 }
-
 .data-all {
     text-align: center;
     margin: 40px 33.3%;
     font-size: 26px;
 }
-
 .contact {
     text-align: left;
     font-size: 20px;
     margin: 40px 33.3%;
 }
-
 .table {
     display: flex;
     justify-content: space-around;
@@ -137,12 +283,15 @@ header {
     font-size: 24px;
     align-items: center;
 } 
-
 .line {
     height: 0.1em; /* Высота линии */
     background-color: rgb(60, 60, 60); /* Цвет подчеркивания при исчезании линии*/
 }
-
+.line-card {
+    margin-top: 90px;
+    height: 0.1em; /* Высота линии */
+    background-color: rgb(60, 60, 60); /* Цвет подчеркивания при исчезании линии*/
+}
 .table-info {
     display: flex;
     justify-content: space-around;
@@ -150,9 +299,8 @@ header {
     font-size: 24px;
     margin-bottom: 50px;    
 }
-
 .info {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .card {
@@ -168,7 +316,7 @@ header {
   
   /* При наведении на карточку - меняем цвет тени */
   .card:hover {
-    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+    box-shadow: 4px 8px 16px rgba(255, 90, 34, 0.2);
   }
   
   .card__top {
@@ -186,19 +334,16 @@ header {
     width: 100%;
     height: 100%;
   }
-  
   .card__image > img {
     width: 100%;
     height: 100%;
     object-fit: contain; /* Встраиваем картинку в контейнер card__image */
-    transition: 0.2s;
+    transition: 0.4s;
   }
-  
   /* При наведении - увеличиваем картинку */
   .card__image:hover > img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
-  
   /* Размещаем скидку на товар относительно изображения */
   .card__label {
     padding: 4px 8px;
@@ -240,7 +385,7 @@ header {
   }
   
   .card__price--discount::before {
-    content: "Со скидкой";
+    content: "Оптовая цена";
     font-weight: 400;
     font-size: 13px;
     color: #bfbfbf;
@@ -254,14 +399,12 @@ header {
     flex-wrap: wrap-reverse;
     justify-content: flex-end;
   }
-  
   .card__price--common::before {
-    content: "Обычная";
+    content: "Обычная цена";
     font-weight: 400;
     font-size: 13px;
     color: #bfbfbf;
   }
-  
   .card__title {
     display: block;
     margin-bottom: 10px;
@@ -270,18 +413,17 @@ header {
     line-height: 150%;
     color: #414141;
   }
-  
   .card__title:hover {
     color: #ff6633;
   }
-  
   .card__add {
     display: block;
     width: 100%;
     font-weight: 400;
     font-size: 17px;
     color: #70c05b;
-    padding: 10px;
+    padding: 10px ;
+    margin-bottom: 80px;
     text-align: center;
     border: 1px solid #70c05b;
     border-radius: 4px;
@@ -289,13 +431,11 @@ header {
     transition: 0.2s;
     margin-top: auto; /* Прижимаем кнопку к низу карточки */
   }
-  
   .card__add:hover {
     border: 1px solid #ff6633;
     background-color: #ff6633;
     color: #fff;
   }
-
   .cards {
     display: grid;
     /* Автоматически заполняем на всю ширину grid-контейнера */
@@ -308,7 +448,6 @@ header {
     row-gap: 40px; /* Отступ между рядами */
     margin: 0 auto;
   }
-
   .cards-top-name {
     display: flex;
     justify-content: flex-start;
@@ -316,3 +455,127 @@ header {
     padding-left: 10%;
     padding-top: 5%;
   }
+.details-title {
+  font-size: 10px;
+}
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+  }
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  /* The dropdown container */
+  .drop {
+    float: left;
+    overflow: hidden;
+  }
+  /* Dropdown button */
+  .drop .dropb {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropd:hover .dropb {
+    background-color: #333;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropd-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropd-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropd-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .drop:hover .dropd-content {
+    display: block;
+  }
+
+  .my-name {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    background-color: #134c54;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 30px;
+    color:#ddd;
+}
+
+.modal-holder {
+  display: none;
+}
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    background-color: black;
+    border-radius: 10px;
+    padding: 1em;
+    transition: .2s all;
+}
+.modal:hover {
+    transform: translate(-50%, -60%);
+    transition: .2s all;
+}
+.modal__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.modal__close {
+   position: fixed;
+   height: 2em;
+   cursor: pointer;
+   transition: .2s all;
+}
+.modal__close:hover {
+    color: #be3513;
+    transition: .2s all;
+    transform: rotate(90deg);
+}
+.modal-feature-title {
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.home{
+ display: flex;
+ padding: 10px;
+ margin: 5px;
+}
