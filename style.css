@@ -1,8 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: white;
-    font:15px ‘Roboto’, Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .line {
     border-bottom: 2px solid #262626; /* Параметры линии */
@@ -11,12 +11,9 @@ body {
   display: flex;
   margin: 5px;
   padding: 5px;
-  color: #c8c7c7;
+  color: #a5a5a5;
 }
-.link__footer {
-  margin-top: 20px; 
-  padding-top: 20px;
-}
+
 .name {
     display: flex;
     text-align: start;
@@ -45,7 +42,7 @@ header {
   font-size: 20px;
   padding-left: 10%;
   padding-top: 5%;
-  margin-top: 400px;
+
 }
 .name_bot {
   display: flex;
@@ -59,13 +56,13 @@ header {
 .card__img {
   display: grid;
     /* Автоматически заполняем на всю ширину grid-контейнера */
-    grid-template-columns: repeat(auto-fill, 225px);
-    width: 100%;
-    max-width: 1000px; /* Ширина grid-контейнера */
+    grid-template-columns: repeat(auto-fill, 20vw);
+    width: 100vw;
+    max-width: 100vw; /* Ширина grid-контейнера */
     justify-content: center;
     justify-items: center; /* Размещаем карточку по центру */
-    column-gap: 30px; /* Отступ между колонками */
-    row-gap: 40px; /* Отступ между рядами */
+    column-gap: 3vw; /* Отступ между колонками */
+    row-gap: 5vh; /* Отступ между рядами */
     margin: 0 auto;
 }
 #sec {
@@ -265,34 +262,36 @@ form.example input[type=text] {
     font-size: 20px;
 }
 .link__footer {
-  margin-top: 8px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 1vw;
+  padding: 0;
+  margin: 1vh;
+  column-gap: 4vw;
 }
-.footer {
+footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    line-height: 36px;
-    margin: 240px 20px 0;
-    padding: 80px 20px;
+    flex-direction: row;
+    margin: 8vh 2vw ;
+    padding: 2vh 2vw;
     background-color: #9c9c9c;
     border-radius: 30px;
-    font-size: 15px;
 }
-.all-title {    
-    text-align: left;
-    font-size: 20px;
-    margin: 40px 33.3%;
+.title__footer {
+  color: #1f1f1f;
+  font-size: 1vw;
 }
-.data-all {
-    text-align: center;
-    margin: 40px 33.3%;
-    font-size: 26px;
-}
-.contact {
-    text-align: left;
-    font-size: 20px;
-    margin: 40px 33.3%;
+.footers {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  color: #1f1f1f;
+  flex-direction: column;
 }
 .table {
     display: flex;
@@ -306,7 +305,7 @@ form.example input[type=text] {
     background-color: rgb(60, 60, 60); /* Цвет подчеркивания при исчезании линии*/
 }
 .line-card {
-    margin-top: 90px;
+    margin-top: 5vh;
     height: 0.1em; /* Высота линии */
     background-color: rgb(60, 60, 60); /* Цвет подчеркивания при исчезании линии*/
 }
@@ -322,8 +321,8 @@ form.example input[type=text] {
 }
 
 .card {
-    width: 225px;
-    min-height: 350px;
+    width: 20vw;
+    min-height: 10vh;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column; /* Размещаем элементы в колонку */
@@ -334,11 +333,11 @@ form.example input[type=text] {
   
   /* При наведении на карточку - меняем цвет тени */
   .card:hover {
-    box-shadow: 4px 8px 16px rgba(255, 90, 34, 0.2);
+    box-shadow: 4px 8px 16px rgba(25, 189, 192, 0.2);
   }
   
   .card__top {
-    flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+    flex: 0 0 22vh; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
     position: relative;
     overflow: hidden; /* Скрываем, что выходит за пределы */
   }
@@ -368,7 +367,7 @@ form.example input[type=text] {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background: #ff6633;
+    background: #11946a;
     border-radius: 4px;
     font-weight: 400;
     font-size: 16px;
@@ -379,13 +378,14 @@ form.example input[type=text] {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
-    padding: 10px;
+    padding: 0.7vw;
   }
   
   .card__prices {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 0.5vh;
     flex: 0 0 50%; /* Размещаем цены равномерно в две колонки */
+    font-size: 2rem;
   }
   
   .card__price::after {
@@ -396,7 +396,7 @@ form.example input[type=text] {
   
   .card__price--discount {
     font-weight: 700;
-    font-size: 19px;
+    font-size: 2vw;
     color: #414141;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -405,13 +405,13 @@ form.example input[type=text] {
   .card__price--discount::before {
     content: "Оптовая цена";
     font-weight: 400;
-    font-size: 13px;
+    font-size: 1vw;
     color: #bfbfbf;
   }
   
   .card__price--common {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 2vw;
     color: #606060;
     display: flex;
     flex-wrap: wrap-reverse;
@@ -420,46 +420,46 @@ form.example input[type=text] {
   .card__price--common::before {
     content: "Розничная цена";
     font-weight: 400;
-    font-size: 13px;
+    font-size: 1vw;
     color: #bfbfbf;
   }
   .card__title {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.6vh;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1vw;
     line-height: 150%;
     color: #414141;
   }
   .card__title:hover {
-    color: #ff6633;
+    color: #11946a;
   }
   .card__add {
     display: block;
     width: 100%;
     font-weight: 400;
-    font-size: 17px;
-    color: #70c05b;
-    padding: 10px ;
-    margin-bottom: 80px;
+    font-size: 1vw;
+    color: #11946a;
+    padding: 0.5vw ;
+    margin-bottom: 0.8vh;
     text-align: center;
-    border: 1px solid #70c05b;
+    border: 1px solid #11946a;
     border-radius: 4px;
     cursor: pointer; /* Меняем курсор при наведении */
     transition: 0.2s;
     margin-top: auto; /* Прижимаем кнопку к низу карточки */
   }
   .card__add:hover {
-    border: 1px solid #ff6633;
-    background-color: #ff6633;
+    border: 1px solid #11946a;
+    background-color: #11946a;
     color: #fff;
   }
   .cards {
     display: grid;
     /* Автоматически заполняем на всю ширину grid-контейнера */
-    grid-template-columns: repeat(auto-fill, 225px);
+    grid-template-columns: repeat(auto-fill, 25vw);
     width: 100%;
-    max-width: 1000px; /* Ширина grid-контейнера */
+    max-width: 100vw; /* Ширина grid-контейнера */
     justify-content: center;
     justify-items: center; /* Размещаем карточку по центру */
     column-gap: 30px; /* Отступ между колонками */
@@ -469,7 +469,7 @@ form.example input[type=text] {
   .cards-top-name {
     display: flex;
     justify-content: flex-start;
-    font-size: 20px;
+    font-size: 3vw;
     padding-left: 10%;
     padding-top: 5%;
   }
@@ -484,7 +484,7 @@ form.example input[type=text] {
   /* Links inside the navbar */
   .navbar a {
     float: left;
-    font-size: 16px;
+    font-size: 1rem;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -497,7 +497,7 @@ form.example input[type=text] {
   }
   /* Dropdown button */
   .drop .dropb {
-    font-size: 16px;
+    font-size: 1vw;
     border: none;
     outline: none;
     color: white;
